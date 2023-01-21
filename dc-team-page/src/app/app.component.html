@@ -1,0 +1,47 @@
+<main>
+	<article class="page">
+		<div class="page__header">
+			<h1 class="page__header-title">The creative crew</h1>
+
+			<div class="page__header-content">
+				<p class="page__header-content-subtitle">Who we are</p>
+				<p class="page__header-content-description">We are team of creatively diverse. driven. innovative individuals working in various locations from the world.</p>
+			</div>
+		</div>
+
+		<!-- Mobile grid -->
+		<div class="page__team mobile" *ngIf="isMobileOrTablet$ | async; else desktop">
+			<div class="page__team-col">
+				<app-profile [profile]="profiles[0]"></app-profile>
+				<app-profile [profile]="profiles[1]"></app-profile>
+				<app-profile [profile]="profiles[2]"></app-profile>
+			</div>
+	
+			<div class="page__team-col">
+				<app-profile [profile]="profiles[3]"></app-profile>
+				<app-profile [profile]="profiles[4]"></app-profile>
+				<app-profile [profile]="profiles[5]"></app-profile>
+			</div>
+		</div>
+
+		<!-- Desktop grid -->
+		<ng-template #desktop>
+			<div class="page__team desktop">
+				<div class="page__team-col">
+					<app-profile [profile]="profiles[0]"></app-profile>
+					<app-profile [profile]="profiles[4]"></app-profile>
+				</div>
+
+				<div class="page__team-col">
+					<app-profile [profile]="profiles[3]"></app-profile>
+					<app-profile [profile]="profiles[2]"></app-profile>
+				</div>
+
+				<div class="page__team-col">
+					<app-profile [profile]="profiles[1]"></app-profile>
+					<app-profile [profile]="profiles[5]"></app-profile>
+				</div>
+			</div>
+		</ng-template>
+	</article>
+</main>

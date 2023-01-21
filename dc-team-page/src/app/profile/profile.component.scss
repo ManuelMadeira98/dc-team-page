@@ -1,0 +1,42 @@
+.profile {
+	&__group {
+		display: flex;
+		flex-direction: column;
+		writing-mode: vertical-lr;
+
+		&-picture {
+			width: 139px;
+			height: 209px;
+		}
+
+		&-position {
+			text-transform: uppercase;
+			font-size: .625rem;
+		}
+	}
+
+	&__name {
+		font-size: .875rem;
+		font-weight: 600;
+		margin-top: .625rem;
+	}
+}
+
+@media (width >= 992px) {
+	.profile {
+		&__group {
+			&-picture {
+				width: 238px;
+				height: 341px;
+			}
+	
+			&-position {
+				font-size: .75rem;
+			}
+		}
+	
+		&__name {
+			font-size: 1.125rem;
+		}
+	}
+}
